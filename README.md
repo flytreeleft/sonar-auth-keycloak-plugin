@@ -94,15 +94,27 @@ Assign some roles to `lily`.
 
 ![](./docs/images/assign-client-roles-to-user.png)
 
-#### 4. Check sonar groups
-Login to SonarQube with Keycloak with account `lily`, go to account profile,
+#### 4. Create sonar groups
+Login to your SonarQube with Administrator account,
+and navigate to "Administration -> Security -> Groups",
+click `Create Group` button to add new group.
+
+![](./docs/images/sync-client-roles-in-admin-groups.png)
+
+**NOTE**: The group name should be same with the Keycloak client roles of user.
+If the `Client Role prefix` is specified in Keycloak, the sonar group name should contains
+the prefix also.
+
+#### 5. Enable client role synchronization
+Navigate to "Administration -> Configuration -> General Settings -> Keycloak Auth",
+enable `Synchronize user client roles`.
+
+![](./docs/images/enable-client-roles-sync-in-sonar.png)
+
+Login to SonarQube with Keycloak using account `lily` in a new session, go to account profile,
 you will see `sonar-dev` and `sonar-test` are assigned to `lily`.
 
 ![](./docs/images/sonar-user-groups-from-keycloak.png)
-
-And, `sonar-dev`, `sonar-test` can be found in "Administration -> Security -> Groups".
-
-![](./docs/images/keycloak-client-roles-in-admin-groups.png)
 
 ## Todos
 * Add unit tests
