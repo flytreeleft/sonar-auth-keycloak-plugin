@@ -19,7 +19,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <keycloak.version>3.3.0.CR1-SNAPSHOT</keycloak.version>
+        <keycloak.version>4.5.0.Final</keycloak.version>
 
         <sonar.pluginClass>org.github.flytreeleft.sonar.auth.keycloak.AuthKeycloakPlugin</sonar.pluginClass>
         <!-- used for deployment to SonarSource Artifactory -->
